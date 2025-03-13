@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杭州数字文旅体验中心</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="杭州旅游官方网站，提供西湖、灵隐寺、西溪湿地、千岛湖等景点的详细介绍">
+    <meta name="keywords" content="杭州旅游, 西湖十景, 灵隐寺, 西溪湿地, 千岛湖">
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/images/logo.png" alt="杭州文旅 logo" class="logo">
+        <h1 class="main-title">杭州数字文旅体验中心</h1>
+        <input type="text" id="searchInput" placeholder="搜索景点">
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#west-lake" class="nav-link">西湖十景</a></li>
+            <li class="nav-item"><a href="#lingyin" class="nav-link">禅意之旅</a></li>
+            <li class="nav-item"><a href="#xixi" class="nav-link">湿地生态</a></li>
+            <li class="nav-item"><a href="#qiandao" class="nav-link">千岛秘境</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="spots-container">
+        <!-- 动态加载内容区域 -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright">© 2023 杭州数字文旅发展中心</p>
+            <p class="contact-info">浙ICP备12345678号 | 旅游热线：0571-12345678</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" id="backToTop">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 8l-6 6h12z"/>
+        </svg>
+    </a>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
