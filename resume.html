@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 前端开发</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        
+        .education-item,
+        .project-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .skill-category {
+            margin-bottom: 25px;
+        }
+        
+        .skill-category h4 {
+            font-size: 18px;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-item {
+            background-color: #ecf0f1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .project-detail {
+            margin-top: 15px;
+        }
+        
+        .project-feature {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .project-tech {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .self-intro {
+            line-height: 1.8;
+        }
+        
+        .project-link {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 40px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>刘顺</h1>
+            <div class="contact-info">
+                <p>电话：13033765176 | 邮箱：l17786358604@163.com</p>
+                <p>GitHub：<a href="https://github.com/kunkai04/hangzhou-tourism" target="_blank">github.com/kunkai04/hangzhou-tourism</a></p>
+                <p>意向：前端开发 ，移动开发 ，人事| 工作地点：武汉，郑州  |学历：专科</p>
+            </div>
+        </header>
+        
+        <section>
+            <h2>个人简介</h2>
+            <p class="self-intro">
+                计算机应用技术专业在读，专注前端开发方向，具备扎实的HTML5、CSS3、JavaScript技术基础，
+                熟练掌握Vue.js框架及现代前端开发流程。在校期间独立完成多个前端项目，具备良好的代码规范和
+                问题解决能力。对用户体验有深刻理解，能够将设计转化为高质量的前端代码。同时具备人力资源实习经验，
+                拥有优秀的沟通协调能力，能够快速融入团队并承担开发任务。持有驾驶证C1，具备良好的交通出行能力。
+            </p>
+        </section>
+        
+        <section>
+            <h2>专业技能</h2>
+            <div class="skill-category">
+                <h4>核心技术</h4>
+                <div class="skill-items">
+                    <span class="skill-item">HTML5/CSS3</span>
+                    <span class="skill-item">JavaScript (ES6+)</span>
+                    <span class="skill-item">TypeScript 基础</span>
+                    <span class="skill-item">DOM操作</span>
+                    <span class="skill-item">响应式设计</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>框架与工具</h4>
+                <div class="skill-items">
+                    <span class="skill-item">Vue.js 框架</span>
+                    <span class="skill-item">React 基础</span>
+                    <span class="skill-item">前端构建工具</span>
+                    <span class="skill-item">Git版本控制</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>开发能力</h4>
+                <div class="skill-items">
+                    <span class="skill-item">模块化开发</span>
+                    <span class="skill-item">前端性能优化</span>
+                    <span class="skill-item">CSS动画</span>
+                    <span class="skill-item">浏览器兼容性</span>
+                    <span class="skill-item">Chrome调试工具</span>
+                    <span class="skill-item">团队协作</span>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>项目经验</h2>
+            <div class="project-item">
+                <h3>杭州数字文旅体验平台 - 前端开发负责人</h3>
+                <div class="date">2023年3月 - 2023年5月</div>
+                <div class="project-detail">
+                    <p>独立设计并开发响应式旅游门户网站，展示杭州核心景点（西湖、灵隐寺等），旨在提升用户体验并传播杭州文旅数字形象。</p>
+                    <ul>
+                        <li class="project-feature">主导前端技术选型，采用模块化开发架构，使用IIFE封装核心业务逻辑，代码复用率提升40%，有效避免全局变量污染</li>
+                        <li class="project-feature">实现图片懒加载功能，使用IntersectionObserver API监听图片元素，首屏加载时间从3.2s优化至2.1s，提升34%</li>
+                        <li class="project-feature">设计并实现响应式布局，运用CSS Grid和Flexbox，兼容PC、平板、手机等多终端，用户体验评分达4.8/5.0</li>
+                        <li class="project-feature">开发实时搜索功能，支持毫秒级景点信息过滤，搜索准确率98%，提升用户查找效率</li>
+                        <li class="project-feature">优化CSS选择器，减少重排重绘，实现平滑滚动至顶部功能，为导航链接添加悬浮动效，增强用户交互体验</li>
+                        <li class="project-feature">解决主流浏览器兼容性问题，确保跨浏览器一致体验，使用Chrome开发者工具进行性能分析和调试</li>
+                    </ul>
+                    <p class="project-tech">技术栈：HTML5, CSS3, JavaScript (ES6+), 响应式设计, IntersectionObserver API, Chrome DevTools</p>
+                    <p class="project-link">项目链接：<a href="https://github.com/kunkai04/hangzhou-tourism" target="_blank">https://github.com/kunkai04/hangzhou-tourism</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>实习经验</h2>
+            <div class="project-item">
+                <h3>人力资源助理 - 松果传媒</h3>
+                <div class="date">2023年6月 - 2023年9月</div>
+                <div class="project-detail">
+                    <ul>
+                        <li class="project-feature">招聘管理：精准挖掘潜在候选人，建立公司专属人才储备库，收录优质候选人信息300+条</li>
+                        <li class="project-feature">员工关系：深度参与公司企业文化建设，主导策划并执行大型线下团建活动及主题分享会，活动参与度超90%</li>
+                        <li class="project-feature">数据支持：熟练使用Excel、PPT进行人力资源数据整理与分析，制作招聘周报，可视化呈现关键招聘指标</li>
+                        <li class="project-feature">行政事务：协助处理员工入职、离职手续及档案管理等日常行政工作</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>教育背景</h2>
+            <div class="education-item">
+                <h3>武汉生物工程学院 | 计算机应用技术 | 专科</h3>
+                <div class="date">2023年9月 - 至今（预计2026年6月毕业）</div>
+                <p>主修课程：数据结构、HTML+CSS、计算机网络、JavaScript程序设计、Web前端开发、数据库原理与应用(MySQL)等</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>自我评价</h2>
+            <p>
+                具备扎实的前端技术基础，能够独立完成页面开发与性能优化任务。持续关注前端技术发展趋势，
+                熟练使用Git进行版本控制，具备良好的代码编写习惯。在项目中注重细节，对用户体验有较高要求，
+                能够与UI设计、后端开发高效协作。学习能力强，能够快速掌握新技术并应用于实际开发。
+                同时具备人力资源实习经验，拥有优秀的沟通协调能力。期望在前端开发岗位上不断成长，为团队贡献价值。
+            </p>
+        </section>
+        
+
+    </div>
+</body>
+</html>
