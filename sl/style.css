@@ -1,4 +1,6 @@
-/* 基础重置 */
+/* 基础样式重置 
+   清除所有元素默认的内外边距，统一盒模型为border-box（边框和内边距计入宽高）
+   统一全局字体为 PingFang SC、Microsoft YaHei 及 sans-serif 后备字体，保证跨平台显示一致性 */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +8,29 @@
     font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
-/* 全局样式 */
+/* 全局样式设置 
+   定义页面默认行高为1.6（提升文本可读性），背景色为浅灰色#f8f9fa，文本颜色为黑色 */
 body {
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #000000;
 }
 
-/* 头部样式 */
+/* 头部区域样式 
+   使用线性渐变（半透明灰色到半透明黑色）叠加背景图，增强文字与背景的对比度
+   背景图自适应铺满且居中显示，文字为白色，内边距4rem 2rem，文本居中对齐 */
 .header {
     background: linear-gradient(rgba(179, 175, 175, 0.7), rgba(0, 0, 0, 0.7)),
                 url('assets/images/header-bg.jpg'); 
+    background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
     padding: 4rem 2rem;
     text-align: center;
 }
 
+/* 头部Logo样式 
+   宽度150px，高度自适应，底部外边距1rem，应用float动画（3秒一个周期，循环浮动） */
 .logo {
     width: 150px;
     height: auto;
@@ -30,19 +38,15 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
+/* 主标题样式 
+   字体大小2.5rem，底部外边距0.5rem，突出显示页面主题 */
 .main-title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
-#searchInput {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-}
-
-/* 导航样式 */
+/* 导航栏样式 
+   白色背景，内边距1.5rem，定位为sticky（滚动时固定在顶部），z-index:1000确保不被其他元素覆盖 */
 .main-nav {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -51,6 +55,8 @@ body {
     z-index: 1000;
 }
 
+/* 导航列表样式 
+   清除默认列表样式，使用flex布局，子元素水平居中对齐，元素间距3rem */
 .nav-list {
     list-style: none;
     display: flex;
@@ -58,78 +64,172 @@ body {
     gap: 3rem;
 }
 
+/* 导航链接样式 
+   文字白色，无下划线，内边距0.8rem 1.5rem，圆角25px（圆角按钮效果）
+   过渡动画0.3s（所有属性变化平滑过渡），浅蓝色背景 */
 .nav-link {
     color: white;
     text-decoration: none;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background-color: rgb(115, 175, 218); 
+    background-color: rgb(115, 175, 218); /* 浅蓝色背景 */
 }
 
+/* 导航链接hover状态 
+   背景色变为青绿色#27cd98，向上移动2px（transform: translateY(-2px)），添加阴影增强立体感 */
 .nav-link:hover {
-    background-color: #cdbc27;
+    background-color: #27cd98;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* 主体内容 */
+/* 主体内容容器样式 
+   最大宽度1200px，水平居中（margin: 3rem auto），左右内边距2rem
+   使用网格布局，4列等宽（repeat(4, 1fr)），列间距2rem */
 .main-content {
-    padding: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4列布局 */
+    gap: 2rem;
 }
 
+/* 景点卡片样式 
+   白色背景，圆角12px，隐藏溢出内容（配合圆角），添加轻微阴影（0 4px 12px rgba(0,0,0,0.1)）
+   过渡动画0.3s（transform属性变化平滑） */
 .scenic-spot {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+/* 景点卡片hover状态 
+   向上移动5px（transform: translateY(-5px)），增强交互反馈 */
+.scenic-spot:hover {
+    transform: translateY(-5px);
+}
+
+/* 景点图片样式 
+   宽度100%，固定高度250px，object-fit: cover（保持比例裁剪图片，填满容器）
+   底部边框3px青绿色#1abc9c，分隔图片与内容 */
 .spot-image {
     width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 5px solid #040505;
 }
 
+/* 景点信息容器样式 
+   内边距1.5rem，控制内容与边框的距离 */
+.spot-info {
+    padding: 1.5rem;
+}
+
+/* 景点名称样式 
+   字体大小1.25rem，底部外边距0.5rem，突出显示名称 */
 .spot-name {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
+/* 景点特色列表样式 
+   清除默认列表样式，使用网格布局，2列等宽，行间距0.5rem，顶部外边距1rem（与描述文本分隔） */
 .features-list {
-    list-style: disc;
-    margin-left: 1rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
-/* 页脚样式 */
+/* 景点特色项样式 
+   文字颜色#666（灰色），字体大小0.9rem，弱化次要信息 */
+.feature-item {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 页脚样式 
+   背景色#70a2d4（蓝灰色），文字白色，内边距3rem 2rem，顶部外边距4rem（与主体内容分隔） */
 .site-footer {
-    background-color: #333;
+    background-color: #70a2d4;
     color: white;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+/* 页脚内容容器样式 
+   最大宽度1200px，水平居中，文本居中对齐 */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
+/* 版权信息样式 
+   底部外边距0.5rem，与联系信息分隔 */
+.copyright {
+    margin-bottom: 0.5rem;
+}
+
+/* 联系信息样式 
+   字体大小0.9rem，颜色#bdc3c7（浅灰色），弱化次要信息 */
+.contact-info {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* 回到顶部按钮样式 
+   固定定位（右下角），底部30px，右侧30px，宽高50px，白色背景，文字白色
+   圆角50%（圆形按钮），默认隐藏（display: none），flex布局居中内容
+   鼠标指针为手型，轻微阴影，透明度过渡0.3s */
 .back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
     color: white;
-    padding: 10px;
     border-radius: 50%;
     display: none;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    box-shadow: 0 3px 10px rgba(8, 8, 8, 0.2);
+    transition: opacity 0.3s ease;
 }
 
-.back-to-top svg {
-    width: 20px;
-    height: 20px;
+/* 回到顶部按钮hover状态 
+   透明度0.8，增强交互反馈 */
+.back-to-top:hover {
+    opacity: 0.8;
 }
 
-/* 响应式设计 */
+/* 浮动动画定义 
+   关键帧：0%和100%状态为初始位置（translateY(0)），50%状态向上移动10px（translateY(-10px)）
+   实现上下浮动效果，用于logo动画 */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 响应式设计：针对屏幕宽度≤768px的设备 
+   适配移动设备的布局调整 */
 @media (max-width: 768px) {
+    /* 导航列表改为垂直布局，文本居中，间距1rem */
     .nav-list {
         flex-direction: column;
+        text-align: center;
         gap: 1rem;
+    }
+
+    /* 主体内容改为单列布局，适应小屏幕 */
+    .main-content {
+        grid-template-columns: 1fr; /* 单列布局 */
     }
 }
